@@ -8,7 +8,7 @@ table {
     border-spacing: 5px;
 }
 
-.delete {
+.pure-button {
     color: red;
     text-decoration: none;
 }

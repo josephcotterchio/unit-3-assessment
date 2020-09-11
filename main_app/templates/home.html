@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Tedious Tasks</title>
+    <title>Tedious Tasks</title>
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
       rel="stylesheet"
@@ -38,18 +38,23 @@
           <td>{{ task.person }}</td>
           <td>
             <form action="{% url 'delete' task.id %}">
-              <input type="submit" value="X" class="delete" />
+              <input
+                style="delete"
+                type="submit"
+                value="X"
+                class="pure-button"
+              />
             </form>
           </td>
         </tr>
         {% endfor %}
       </tbody>
     </table>
-    <hr>
+    <hr />
     <form action="" method="POST" class="pure-form">
-      <h4>Add Task</h4>
-      {% csrf_token %} {{ form.as_p }}
-      <input type="submit" value="Add Task" class="submit-btn" />
+      <h4>Add Widget</h4>
+      {% csrf_token %} {{ task_form.as_p }}
+      <input type="submit" value="Add Widget" class="submit-btn" />
     </form>
   </body>
 </html>
