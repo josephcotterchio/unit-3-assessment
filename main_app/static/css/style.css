@@ -15,4 +15,5 @@ table {
 
 .row {
   border-spacing: 5px;
+  text-align: left;
 }
