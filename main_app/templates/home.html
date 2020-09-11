@@ -24,10 +24,11 @@
     <h3>No Tasks Exist</h3>
     {% else %}
     <table>
-      <thead>
-        <th>Description</th>
-        <th>Quantity</th>
-        <th>Delete</th>
+      <thead class="head">
+        <th class="row">Description</th>
+        <th class="row">Time</th>
+        <th class="row">Person</th>
+        <th class="row">Delete</th>
       </thead>
       <tbody>
         {% endif %} {% for task in task_list %}
@@ -43,7 +44,7 @@
         {% endfor %}
       </tbody>
     </table>
-    <hr />
+    <hr>
     <form action="" method="POST" class="pure-form">
       <h4>Add Task</h4>
       {% csrf_token %} {{ form.as_p }}
