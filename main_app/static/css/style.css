@@ -4,9 +4,11 @@ body {
 }
 table {
     margin: 2rem auto;
+    border-collapse: separate;
+    border-spacing: 5px;
 }
 
-table a {
+.delete {
     color: red;
     text-decoration: none;
 }

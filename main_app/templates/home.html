@@ -33,11 +33,12 @@
       <tbody>
         {% endif %} {% for task in task_list %}
         <tr>
-          <td>{{ task.name }}</td>
-          <td>{{ task.quantity }}</td>
+          <td>{{ task.description }}</td>
+          <td>{{ task.time }}</td>
+          <td>{{ task.person }}</td>
           <td>
             <form action="{% url 'delete' task.id %}">
-              <input type="submit" value="X" class="pure-button" />
+              <input type="submit" value="X" class="delete" />
             </form>
           </td>
         </tr>
